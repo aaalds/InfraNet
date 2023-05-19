@@ -2,7 +2,8 @@
 InfraNet: Accurate Forehead Temperature Measurement Framework for People in the Wild with Monocular Thermal Infrared Camera
 
 
-Abstract:During an epidemic, accurate human temperature screening based on neural networks for disease
+# Abstract
+During an epidemic, accurate human temperature screening based on neural networks for disease
 surveillance is important and challenging. Existing distant human forehead temperature measuring
 device usually adopts a dual-camera system using paired RGB and thermal infrared images to conduct
 face detection and temperature measurement. Since the facial RGB image may undermine people’s
@@ -18,25 +19,25 @@ thermal infrared images. Experiments on our wild dataset demonstrated that the I
 91.6% high accuracy of distant multi-subject temperature measurement on average under the standard
 temperature threshold of strict 0.3◦C.
 
-Non-linear temperature attenuation (floating) calibration(The captured temperature
-map by the thermal infrared camera presents non-linear attenuation, especially in the distant region.):
+# Non-linear temperature attenuation (floating) calibration
+The captured temperature map by the thermal infrared camera presents non-linear attenuation, especially in the distant region.
 ![2](https://github.com/aaalds/InfraNet/assets/92625242/c5b6f4e9-38af-40d4-a6fa-016ffc2c7287)
-This is an example as shown demonstrates the nonlinear temperature decay of the 37◦C blackbody in a large area (12 metres vertical
-depth and 3 metres horizontal width). It can be seen that its temperature is closest to the true temperature at a vertical depth of 4 -
+This is an example as shown demonstrates the nonlinear temperature decay of the 37◦C blackbody in a large area (12 metres vertical
+depth and 3 metres horizontal width). It can be seen that its temperature is closest to the true temperature at a vertical depth of 4 -
 5 metres and a horizontal offset of 0m, while all other areas show
 irregular decay. The figure shows that our goal is to calibrate all
 temperatures in the region to the interior of the upper and lower
 planes, which shows how difficult this goal is.
 
 
-Our proposed InfraNet:
+# Our proposed InfraNet:
 ![1](https://github.com/aaalds/InfraNet/assets/92625242/964a0785-c0a2-44d9-8c7e-824802e5ec01)
 InfraNet extracts the features from monocular thermal infrared images for remote face location and temperature calibration. It
 consists of three subnets, including the face detection subnet, depth and horizontal offset estimation subnet, and temperature calibration
 subnet. InfraNet innovatively uses single-frame thermal infrared image for depth estimation and horizontal offset estimation, and utilizes
 this information to calibrate the raw facial forehead temperature.
 
- Datasets:
+ # Datasets:
 ![3](https://github.com/aaalds/InfraNet/assets/92625242/7b7dde25-df6e-4f7a-a0e5-65db4bdddfd0)
 General description of L-TMII Dataset and W-TMII Dataset. We collected data according to different human characteristics, such
 as whether existing glasses, masks, forehead occlusions or different facial orientations, etc.
